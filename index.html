@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>แผนกอิเล็กทรอนิกส์</title>
-
+    <link rel="icon" type="image/x-icon" href="images/Ye Shunguang.ico">
+    
     <!-- เชื่อมต่อ CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -35,10 +36,13 @@
     </header>
 
 
-    <!-- ================= HERO ================= -->
+<!-- ================= HERO ================= -->
 
-    <section class="hero">
+<section class="hero">
 
+    <div class="hero-content">
+
+        <!-- ฝั่งซ้าย -->
         <div class="hero-text">
 
             <p class="small-title">
@@ -60,8 +64,22 @@
 
         </div>
 
-    </section>
 
+        <!-- ฝั่งขวา : YouTube Video -->
+        <div class="hero-video">
+
+            <iframe
+                src="https://www.youtube.com/embed/uXr4lXYjXuU?si=SYX9OFL1pirmhgUT  "
+                title="วิดีโอแนะนำแผนกอิเล็กทรอนิกส์"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
 
     <!-- ================= ABOUT ================= -->
 
@@ -368,6 +386,27 @@
         </div>
 
     </footer>
+        <audio id="bgMusic" loop>
+            <source src="music/รองเท้าเก่า.mp3" type="audio/mpeg">
+        </audio>
 
+        <button id="musicButton" onclick="toggleMusic()">
+            🎵 เปิดเพลง
+        </button>
+
+        <script>
+        const music = document.getElementById("bgMusic");
+        const button = document.getElementById("musicButton");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                button.innerHTML = "🔊 ปิดเพลง";
+            } else {
+                music.pause();
+                button.innerHTML = "🎵 เปิดเพลง";
+            }
+        }
+        </script>
 </body>
 </html>
